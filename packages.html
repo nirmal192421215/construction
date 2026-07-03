@@ -555,11 +555,11 @@
       let state = {
         floors: 2,
         pkgRate: 2399,
-        floorAreas: [1000, 1000, 1000, 1000],
-        sump: 9000,
-        septic: 6000,
-        compoundL: 40,
-        compoundH: 6
+        floorAreas: ['', '', '', ''],
+        sump: '',
+        septic: '',
+        compoundL: '',
+        compoundH: ''
       };
       
       function renderTable() {
@@ -641,28 +641,28 @@
         document.querySelectorAll('.adv-input-floor').forEach(input => {
           input.addEventListener('input', (e) => {
             const idx = parseInt(e.target.dataset.idx);
-            state.floorAreas[idx] = parseInt(e.target.value) || 0;
+            state.floorAreas[idx] = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
             renderTable();
           });
         });
         
         document.getElementById('adv-input-sump').addEventListener('input', (e) => {
-          state.sump = parseInt(e.target.value) || 0;
+          state.sump = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
           renderTable();
         });
         
         document.getElementById('adv-input-septic').addEventListener('input', (e) => {
-          state.septic = parseInt(e.target.value) || 0;
+          state.septic = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
           renderTable();
         });
         
         document.getElementById('adv-input-wall-l').addEventListener('input', (e) => {
-          state.compoundL = parseInt(e.target.value) || 0;
+          state.compoundL = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
           renderTable();
         });
         
         document.getElementById('adv-input-wall-h').addEventListener('input', (e) => {
-          state.compoundH = parseInt(e.target.value) || 0;
+          state.compoundH = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
           renderTable();
         });
       }
