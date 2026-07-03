@@ -129,6 +129,10 @@ body > * {
     justify-content: flex-start;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 9998 !important; /* Force above everything but navbar */
+  }
+  .navbar {
+    z-index: 9999 !important; /* Force on top */
   }
   .mobile-menu .nav-link {
     font-size: 1.4rem;
