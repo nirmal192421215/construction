@@ -89,7 +89,7 @@ body > * {
     max-width: 120px !important;
   }
   .navbar-cta {
-    gap: 0.4rem;
+    gap: 1rem;
     flex-shrink: 0;
   }
   .navbar-cta .btn {

@@ -36,18 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Mobile hamburger ─────────────────────────────────────
-  const hamburger = document.querySelector('.hamburger');
+  const hamburgers = document.querySelectorAll('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  if (hamburgers.length > 0 && mobileMenu) {
+    hamburgers.forEach(hamburger => {
+      hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      });
     });
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
+        hamburgers.forEach(h => h.classList.remove('open'));
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
