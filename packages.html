@@ -564,13 +564,10 @@
       
       function renderTable() {
         tbody.innerHTML = '';
-        let totalCost = 0;
         
         // Render Floor Rows
         for (let i = 0; i < state.floors; i++) {
           const area = state.floorAreas[i];
-          const cost = area * state.pkgRate;
-          totalCost += cost;
           
           tbody.innerHTML += `
             <tr style="border-bottom: 1px solid #eee;">
@@ -580,14 +577,12 @@
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">sqft</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹${state.pkgRate}</td>
-              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;">₹ ${cost.toLocaleString('en-IN')}</td>
+              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;" id="floor-cost-${i}">₹ 0</td>
             </tr>
           `;
         }
         
         // Sump Row
-        const sumpCost = state.sump * 24;
-        totalCost += sumpCost;
         tbody.innerHTML += `
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of RCC Water Sump (A 4 member family will require 9000 liter capacity)</td>
@@ -596,13 +591,11 @@
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">ltr</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹24</td>
-              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;">₹ ${sumpCost.toLocaleString('en-IN')}</td>
+              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;" id="sump-cost">₹ 0</td>
             </tr>
         `;
         
         // Septic Row
-        const septicCost = state.septic * 24;
-        totalCost += septicCost;
         tbody.innerHTML += `
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of Septic Tank</td>
@@ -611,13 +604,11 @@
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">ltr</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹24</td>
-              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;">₹ ${septicCost.toLocaleString('en-IN')}</td>
+              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;" id="septic-cost">₹ 0</td>
             </tr>
         `;
         
         // Compound Wall Row (Length * Height * 425)
-        const wallCost = state.compoundL * state.compoundH * 425;
-        totalCost += wallCost;
         tbody.innerHTML += `
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Plain Compound Wall (Length & Height)</td>
@@ -627,14 +618,45 @@
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">sqft</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹425</td>
-              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;">₹ ${wallCost.toLocaleString('en-IN')}</td>
+              <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right; font-weight: 500; white-space: nowrap;" id="wall-cost">₹ 0</td>
             </tr>
         `;
         
-        // Update Total
-        totalEl.innerText = '₹ ' + totalCost.toLocaleString('en-IN');
-        
         attachListeners();
+        updateCosts();
+      }
+
+      function updateCosts() {
+        let totalCost = 0;
+        
+        for (let i = 0; i < state.floors; i++) {
+          const area = state.floorAreas[i] === '' ? 0 : state.floorAreas[i];
+          const cost = area * state.pkgRate;
+          totalCost += cost;
+          const floorCostEl = document.getElementById(`floor-cost-${i}`);
+          if (floorCostEl) floorCostEl.innerText = '₹ ' + cost.toLocaleString('en-IN');
+        }
+        
+        const sumpVal = state.sump === '' ? 0 : state.sump;
+        const sumpCost = sumpVal * 24;
+        totalCost += sumpCost;
+        const sumpCostEl = document.getElementById('sump-cost');
+        if (sumpCostEl) sumpCostEl.innerText = '₹ ' + sumpCost.toLocaleString('en-IN');
+        
+        const septicVal = state.septic === '' ? 0 : state.septic;
+        const septicCost = septicVal * 24;
+        totalCost += septicCost;
+        const septicCostEl = document.getElementById('septic-cost');
+        if (septicCostEl) septicCostEl.innerText = '₹ ' + septicCost.toLocaleString('en-IN');
+        
+        const wallL = state.compoundL === '' ? 0 : state.compoundL;
+        const wallH = state.compoundH === '' ? 0 : state.compoundH;
+        const wallCost = wallL * wallH * 425;
+        totalCost += wallCost;
+        const wallCostEl = document.getElementById('wall-cost');
+        if (wallCostEl) wallCostEl.innerText = '₹ ' + wallCost.toLocaleString('en-IN');
+        
+        totalEl.innerText = '₹ ' + totalCost.toLocaleString('en-IN');
       }
       
       function attachListeners() {
@@ -642,28 +664,28 @@
           input.addEventListener('input', (e) => {
             const idx = parseInt(e.target.dataset.idx);
             state.floorAreas[idx] = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
-            renderTable();
+            updateCosts();
           });
         });
         
         document.getElementById('adv-input-sump').addEventListener('input', (e) => {
           state.sump = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
-          renderTable();
+          updateCosts();
         });
         
         document.getElementById('adv-input-septic').addEventListener('input', (e) => {
           state.septic = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
-          renderTable();
+          updateCosts();
         });
         
         document.getElementById('adv-input-wall-l').addEventListener('input', (e) => {
           state.compoundL = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
-          renderTable();
+          updateCosts();
         });
         
         document.getElementById('adv-input-wall-h').addEventListener('input', (e) => {
           state.compoundH = e.target.value === '' ? '' : (parseInt(e.target.value) || 0);
-          renderTable();
+          updateCosts();
         });
       }
       
