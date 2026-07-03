@@ -2,6 +2,19 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+
+<style>
+/* FORCE FOOTER GRID MOBILE */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem 1rem !important;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+}
+</style>
 </head>
 <body>
 <svg width="400" height="200">

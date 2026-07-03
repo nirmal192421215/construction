@@ -611,6 +611,19 @@ body{overflow-x:clip!important;width:100%!important}
   justify-content:center!important;
 }
 </style>
+
+<style>
+/* FORCE FOOTER GRID MOBILE */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem 1rem !important;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+}
+</style>
 </head>
 
 <body class="loading">
