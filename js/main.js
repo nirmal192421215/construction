@@ -35,22 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
   }
 
-  // ── Mobile hamburger ─────────────────────────────────────
-  const hamburgers = document.querySelectorAll('.hamburger');
+  // ── Mobile hamburger (Inline onClick used) ───────────────
   const mobileMenu = document.querySelector('.mobile-menu');
-  if (hamburgers.length > 0 && mobileMenu) {
-    hamburgers.forEach(hamburger => {
-      hamburger.addEventListener('click', (e) => {
-        e.preventDefault();
-        hamburger.classList.toggle('open');
-        mobileMenu.classList.toggle('open');
-        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-      });
-    });
+  if (mobileMenu) {
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        hamburgers.forEach(h => h.classList.remove('open'));
+        document.querySelectorAll('.hamburger').forEach(h => h.classList.remove('open'));
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
