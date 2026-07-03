@@ -35,9 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
   }
 
-  // ── Mobile hamburger (Inline onClick used) ───────────────
+  // ── Mobile hamburger (Event Delegation) ───────────────
   const mobileMenu = document.querySelector('.mobile-menu');
   if (mobileMenu) {
+    document.body.addEventListener('click', (e) => {
+      const hamburger = e.target.closest('.hamburger');
+      if (hamburger) {
+        e.preventDefault();
+        const hamburgers = document.querySelectorAll('.hamburger');
+        const isOpen = !hamburger.classList.contains('open');
+        
+        hamburgers.forEach(h => h.classList.toggle('open', isOpen));
+        mobileMenu.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+    });
+
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
