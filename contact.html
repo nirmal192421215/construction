@@ -513,7 +513,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
   }
-  @media(max-width: 768px) { .contact-info-bar-inner { grid-template-columns: 1fr; } }
+  @media(max-width: 768px) { 
+    .contact-info-bar-inner { grid-template-columns: 1fr; padding: 0; }
+    .contact-info-item { padding: 1.25rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .contact-info-item:last-child { border-bottom: none; }
+  }
   .contact-info-item {
     display: flex;
     align-items: center;
