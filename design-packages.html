@@ -360,6 +360,50 @@
     animation: loaderSubFade 1.2s 1s ease both;
   }
 </style>
+
+<style id="mobile-nav-zfix">
+/* CRITICAL: Mobile menu must sit above navbar z-index:200 */
+.mobile-menu{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;bottom:0!important;
+  width:100%!important;height:100%!important;
+  z-index:9999!important;
+  background:#0D1B2A!important;
+  transform:translateX(100%)!important;
+  transition:transform 0.45s cubic-bezier(0.76,0,0.24,1)!important;
+  visibility:hidden!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  padding-top:5rem!important;
+  padding-bottom:3rem!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  gap:0!important;
+}
+.mobile-menu.open{
+  transform:translateX(0)!important;
+  visibility:visible!important;
+}
+.mobile-menu .nav-link{
+  color:#ffffff!important;
+  display:block!important;
+  width:100%!important;
+  text-align:center!important;
+  padding:1rem 2rem!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  font-size:1.4rem!important;
+  text-decoration:none!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+.mobile-menu .btn{
+  margin-top:1.5rem!important;
+  width:calc(100% - 4rem)!important;
+  justify-content:center!important;
+}
+</style>
 </head>
 
 <body class="loading">
