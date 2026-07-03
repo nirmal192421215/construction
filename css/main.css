@@ -1334,3 +1334,5 @@ html, body {
     padding: 0 1rem !important;
   }
 }
+
+.bind-logo-text { font-family: 'Bauhaus 93', sans-serif !important; }
