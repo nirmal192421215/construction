@@ -272,6 +272,12 @@
     color: rgba(255,255,255,0.35);
     margin-top: 0.6rem;
     animation: loaderSubFade 1s 0.5s ease both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
   }
 
   .loader-divider {
@@ -380,7 +386,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" style="height:80px; width:auto; color:white;">
       <text x="50%" y="92" text-anchor="middle" class="bind-logo-text" font-weight="normal" font-size="95px" fill="currentColor" letter-spacing="2px">BIND</text>
     </svg>
-    <div class="loader-sub">Architecture &nbsp;&nbsp;|&nbsp;&nbsp; Interior &nbsp;&nbsp;|&nbsp;&nbsp; Construction</div>
+    <div class="loader-sub"><span>Architecture</span><span style="opacity:0.4; margin:0 0.5rem">|</span><span>Interior</span><span style="opacity:0.4; margin:0 0.5rem">|</span><span>Construction</span></div>
   </div>
   <div class="loader-divider"></div>
   <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
