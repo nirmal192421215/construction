@@ -1041,43 +1041,6 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   border-right: 1px solid rgba(201, 168, 76, 0.2);
 }
 
-@media (max-width: 992px) {
-  .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td {
-    display: block;
-    width: 100%;
-  }
-  .spec-table tr {
-    margin-bottom: 1rem;
-    background: rgba(22, 32, 50, 0.05);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .spec-table th {
-    background: rgba(201, 168, 76, 0.1);
-    border-bottom: 1px solid rgba(22, 32, 50, 0.1);
-  }
-  .spec-table td {
-    position: relative;
-    padding-left: 50%;
-    border-top: none;
-    border-bottom: 1px solid rgba(22, 32, 50, 0.05);
-  }
-  .spec-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: 600;
-    color: var(--c-gold);
-    width: 40%;
-  }
-  .spec-table td.highlight {
-    border-left: none;
-    border-right: none;
-  }
-}
-
 /* ── ADVANCED PRICING CARD STYLES ── */
 .glass-card {
   padding: 0; /* Reset padding to handle full-width banners */

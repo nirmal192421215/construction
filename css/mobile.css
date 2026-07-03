@@ -853,14 +853,45 @@ body > * {
     padding: 0.35rem 0.875rem !important;
     font-size: 0.78rem !important;
   }
-  /* Spec table on mobile */
-  .spec-table,
-  .spec-table tbody,
-  .spec-table tr,
-  .spec-table th,
-  .spec-table td {
-    display: block !important;
+  /* Spec table on mobile (Compact Table Layout) */
+  .spec-table {
+    display: table !important;
     width: 100% !important;
+  }
+  .spec-table, 
+  .spec-table tbody, 
+  .spec-table tr {
+    display: table !important; /* ensure rows behave as rows */
+    width: 100% !important;
+  }
+  .spec-table thead, .spec-table tbody {
+    display: table-row-group !important;
+  }
+  .spec-table tr {
+    display: table-row !important;
+  }
+  .spec-table th, 
+  .spec-table td {
+    display: table-cell !important;
+    padding: 0.4rem 0.2rem !important;
+    font-size: 0.65rem !important; /* Make text tiny to fit */
+    vertical-align: middle !important;
+    line-height: 1.2 !important;
+  }
+  .spec-table th span, .spec-table td span {
+    font-size: 0.55rem !important;
+  }
+  .spec-table td.status-yes, .spec-table td.status-no {
+    font-size: 0.8rem !important;
+  }
+  .spec-accordion-body {
+    padding: 0.25rem !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Remove data-labels on mobile table */
+  .spec-table td::before {
+    display: none !important;
   }
 }
 
