@@ -35,26 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
   }
 
-  // ── Mobile hamburger (Event Delegation) ───────────────
+  // ── Mobile hamburger ─────────────────────────────────────
+  const hamburgers = document.querySelectorAll('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-  if (mobileMenu) {
-    document.body.addEventListener('click', (e) => {
-      const hamburger = e.target.closest('.hamburger');
-      if (hamburger) {
+  if (hamburgers.length > 0 && mobileMenu) {
+    hamburgers.forEach(hamburger => {
+      hamburger.addEventListener('click', (e) => {
         e.preventDefault();
-        const hamburgers = document.querySelectorAll('.hamburger');
+        e.stopPropagation();
         const isOpen = !hamburger.classList.contains('open');
         
         hamburgers.forEach(h => h.classList.toggle('open', isOpen));
         mobileMenu.classList.toggle('open', isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
-      }
+      });
     });
-
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        document.querySelectorAll('.hamburger').forEach(h => h.classList.remove('open'));
+        hamburgers.forEach(h => h.classList.remove('open'));
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
