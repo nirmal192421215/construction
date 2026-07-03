@@ -622,8 +622,7 @@ body > * {
 @media (max-width: 700px) {
   .entry-modal-overlay {
     padding: 1rem !important;
-    align-items: flex-start !important;
-    padding-top: 1rem !important;
+    align-items: center !important;
     overflow-y: auto !important;
   }
   .entry-modal {
@@ -683,7 +682,7 @@ body > * {
   .em-title {
     font-size: 1.25rem !important;
     margin-bottom: 0.75rem !important;
-    padding-right: 2rem !important;
+    text-align: center !important;
   }
   .em-left .btn-submit {
     padding: 0.6rem !important;
