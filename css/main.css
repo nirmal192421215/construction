@@ -1274,3 +1274,28 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 [data-theme="dark"] .footer-link {
   color: var(--c-text) !important;
 }
+
+/* Mobile Overflow Fixes */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure container doesn't overflow */
+.container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .hero-stats {
+    flex-wrap: wrap;
+  }
+}
