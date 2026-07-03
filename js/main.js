@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Dark Mode Toggle ─────────────────────────────────────
-  const darkToggle = document.getElementById('dark-toggle');
+  const darkToggles = document.querySelectorAll('.dark-toggle');
   const htmlEl = document.documentElement;
 
   const savedTheme = localStorage.getItem('aureum-theme') || 'light';
@@ -63,13 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     htmlEl.setAttribute('data-theme', 'dark');
   }
 
-  if (darkToggle) {
-    darkToggle.addEventListener('click', () => {
+  darkToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
       const isDark = htmlEl.getAttribute('data-theme') === 'dark';
       htmlEl.setAttribute('data-theme', isDark ? 'light' : 'dark');
       localStorage.setItem('aureum-theme', isDark ? 'light' : 'dark');
     });
-  }
+  });
 
   // ── Back To Top ──────────────────────────────────────────
   const backTop = document.querySelector('.back-to-top');
