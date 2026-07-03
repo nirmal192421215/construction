@@ -351,9 +351,18 @@ body{overflow-x:clip!important;width:100%!important}
     flex-shrink:0!important;
   }
   .dark-toggle{
-    width:36px!important;
-    height:36px!important;
+    width:38px!important;
+    height:20px!important;
     flex-shrink:0!important;
+  }
+  .dark-toggle::after{
+    width:14px!important;
+    height:14px!important;
+    top:1.5px!important;
+    left:2px!important;
+  }
+  [data-theme="dark"] .dark-toggle::after{
+    transform:translateX(18px)!important;
   }
   /* GET FREE QUOTE: make tiny */
   #nav-quote-btn{
@@ -396,7 +405,19 @@ body{overflow-x:clip!important;width:100%!important}
 @media(max-width:600px){
   #nav-quote-btn{display:none!important}
   .bind-logo-svg{height:28px!important;width:140px!important;max-width:140px!important}
-  .dark-toggle{width:32px!important;height:32px!important}
+  .dark-toggle{
+    width:34px!important;
+    height:18px!important;
+  }
+  .dark-toggle::after{
+    width:12px!important;
+    height:12px!important;
+    top:1.5px!important;
+    left:2px!important;
+  }
+  [data-theme="dark"] .dark-toggle::after{
+    transform:translateX(16px)!important;
+  }
   .hamburger{width:32px!important;height:32px!important}
 }
 
