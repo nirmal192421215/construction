@@ -317,41 +317,84 @@
 
 
 
+
 <style>
 /* Responsive Calculator Table */
 @media (max-width: 768px) {
   .adv-calc-table { min-width: 100% !important; }
   .adv-calc-table thead { display: none !important; }
-  .adv-calc-table, .adv-calc-table tbody, .adv-calc-table tr, .adv-calc-table td { display: block !important; width: 100% !important; box-sizing: border-box !important; }
-  .adv-calc-table tr { margin-bottom: 1rem !important; border: 1px solid #eee !important; border-radius: 8px !important; padding: 1rem !important; background: #fafafa !important; }
-  .adv-calc-table td { text-align: left !important; padding: 0.25rem 0 !important; border: none !important; display: flex !important; justify-content: space-between !important; align-items: center !important; }
-  .adv-calc-table td:nth-child(1) { font-weight: 600 !important; font-size: 0.95rem !important; color: var(--c-navy) !important; margin-bottom: 0.5rem !important; display: block !important; }
+  .adv-calc-table, .adv-calc-table tbody { display: block !important; width: 100% !important; box-sizing: border-box !important; }
   
-  /* Input row */
-  .adv-calc-table td:nth-child(2) { display: block !important; margin-bottom: 0.5rem !important; }
-  .adv-calc-table td:nth-child(2) input { max-width: 100% !important; }
+  .adv-calc-table tr { 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px 8px !important;
+    margin-bottom: 0.5rem !important; 
+    border: 1px solid #eee !important; 
+    border-radius: 6px !important; 
+    padding: 0.5rem !important; 
+    background: #fafafa !important; 
+  }
+  
+  .adv-calc-table td { 
+    border: none !important; 
+    padding: 0 !important; 
+    margin: 0 !important; 
+    display: flex !important; 
+    align-items: center !important; 
+    font-size: 0.75rem !important;
+  }
+  
+  /* Title spans full width */
+  .adv-calc-table td:nth-child(1) { 
+    grid-column: 1 / -1 !important; 
+    font-weight: 600 !important; 
+    color: var(--c-navy) !important; 
+    margin-bottom: 2px !important;
+  }
+  
+  /* Input */
+  .adv-calc-table td:nth-child(2) { grid-column: 1 / 2 !important; }
+  .adv-calc-table td:nth-child(2) input { 
+    height: 28px !important; 
+    padding: 0 4px !important; 
+    font-size: 0.75rem !important;
+    width: 100% !important;
+  }
   
   /* Unit */
-  .adv-calc-table td:nth-child(3):before { content: "Unit:"; font-weight: 600; font-size: 0.8rem; color: #666; }
+  .adv-calc-table td:nth-child(3) { grid-column: 2 / 3 !important; color: #666 !important; justify-content: flex-start !important; }
+  .adv-calc-table td:nth-child(3):before { display: none !important; }
+  
   /* Rate */
-  .adv-calc-table td:nth-child(4):before { content: "Rate:"; font-weight: 600; font-size: 0.8rem; color: #666; }
+  .adv-calc-table td:nth-child(4) { grid-column: 1 / 2 !important; color: #666 !important; }
+  .adv-calc-table td:nth-child(4):before { content: "@ "; font-weight: 600; margin-right: 2px; }
+  
   /* Cost */
-  .adv-calc-table td:nth-child(5) { font-size: 1.1rem !important; color: var(--c-navy) !important; margin-top: 0.5rem !important; border-top: 1px dashed #ddd !important; padding-top: 0.5rem !important; }
-  .adv-calc-table td:nth-child(5):before { content: "Cost:"; font-weight: 600; font-size: 0.9rem; color: #666; }
+  .adv-calc-table td:nth-child(5) { 
+    grid-column: 2 / 3 !important; 
+    font-size: 0.85rem !important; 
+    font-weight: bold !important; 
+    color: var(--c-gold) !important; 
+    justify-content: flex-start !important;
+  }
+  .adv-calc-table td:nth-child(5):before { content: "= "; margin-right: 4px; color: var(--c-navy); }
 
   /* Tfoot */
-  .adv-calc-table tfoot tr { background: #f0f0f0 !important; border: none !important; }
-  .adv-calc-table tfoot td { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
-  .adv-calc-table tfoot td:nth-child(1) { display: block !important; margin-bottom: 0.5rem !important; font-size: 1rem !important; }
-  .adv-calc-table tfoot td:nth-child(2) { font-size: 1.5rem !important; border: none !important; padding-top: 0 !important; }
+  .adv-calc-table tfoot tr { display: flex !important; flex-direction: row !important; justify-content: space-between !important; background: var(--c-navy) !important; color: white !important; align-items: center !important; padding: 0.75rem !important; }
+  .adv-calc-table tfoot td { display: block !important; border: none !important; color: white !important; font-size: 0.85rem !important; }
+  .adv-calc-table tfoot td:nth-child(1) { font-weight: normal !important; text-align: left !important; }
+  .adv-calc-table tfoot td:nth-child(2) { font-weight: bold !important; font-size: 1.1rem !important; text-align: right !important; color: var(--c-gold) !important; }
   .adv-calc-table tfoot td:nth-child(2):before { display: none !important; }
   
   /* Controls */
-  .calc-controls { flex-direction: column !important; align-items: stretch !important; gap: 1rem !important; }
-  .calc-controls > div { flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; }
-  .calc-controls select { width: 100% !important; }
+  .calc-controls { flex-direction: column !important; align-items: stretch !important; gap: 0.75rem !important; margin-bottom: 0.75rem !important; }
+  .calc-controls > div { flex-direction: row !important; justify-content: space-between !important; align-items: center !important; gap: 0.5rem !important; }
+  .calc-controls label { font-size: 0.8rem !important; }
+  .calc-controls select { width: 60% !important; padding: 0.25rem 0.5rem !important; font-size: 0.8rem !important; }
 }
 </style>
+
 </head>
 <body>
 <div id="loading-screen">
