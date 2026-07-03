@@ -1299,3 +1299,29 @@ html, body {
     flex-wrap: wrap;
   }
 }
+
+/* HARD MOBILE OVERFLOW RESET */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
+}
+* {
+  max-width: 100%;
+}
+.hero-content h1, .hero-title {
+  word-wrap: break-word;
+  white-space: normal;
+}
+.hero {
+  overflow-x: hidden !important;
+}
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-content {
+    padding: 0 1rem !important;
+  }
+}
