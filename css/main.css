@@ -1226,6 +1226,15 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   color: var(--c-text) !important;
 }
 
+/* Package Card Text Readability in Dark Mode */
+[data-theme="dark"] .pkg-desc-text,
+[data-theme="dark"] .glass-feature {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+[data-theme="dark"] .pkg-included-label {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
 [data-theme="dark"] .theme-premium .pkg-save-badge,
 [data-theme="dark"] .theme-luxury .pkg-save-badge {
   color: var(--c-text) !important;
