@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <style>
+      .logo-main {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        font-size: 85px;
+        fill: #162032;
+        letter-spacing: -2px;
+      }
+      .logo-sub {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        fill: #162032;
+        letter-spacing: 0.5px;
+      }
+      .divider {
+        fill: #162032;
+      }
+    </style>
+  </defs>
+  
+  <!-- B -->
+  <path d="M 20,95 L 45,95 Q 70,95 70,70 Q 70,55 55,50 Q 65,45 65,30 Q 65,10 40,10 L 20,10 Z" fill="#162032" />
+  <!-- B internal holes (simplified) -->
+  <path d="M 35,25 L 40,25 Q 48,25 48,33 Q 48,42 40,42 L 35,42 Z" fill="white" />
+  <path d="M 35,58 L 42,58 Q 52,58 52,68 Q 52,78 42,78 L 35,78 Z" fill="white" />
+  <!-- B split (the gap in the left stem) -->
+  <rect x="32" y="10" width="4" height="85" fill="white" />
+
+  <!-- I -->
+  <rect x="85" y="10" width="22" height="85" fill="#162032" />
+  
+  <!-- N (Arched shape) -->
+  <path d="M 125,95 L 125,50 Q 125,10 160,10 Q 195,10 195,50 L 195,95 L 173,95 L 173,50 Q 173,32 160,32 Q 147,32 147,50 L 147,95 Z" fill="#162032" />
+  
+  <!-- D -->
+  <path d="M 210,95 L 245,95 Q 285,95 285,52.5 Q 285,10 245,10 L 210,10 Z" fill="#162032" />
+  <path d="M 232,32 L 242,32 Q 258,32 258,52.5 Q 258,73 242,73 L 232,73 Z" fill="white" />
+  
+  <!-- Subtext -->
+  <text x="25" y="115" class="logo-sub">Architecture <tspan class="divider">|</tspan> Interior <tspan class="divider">|</tspan> Construction</text>
+</svg>

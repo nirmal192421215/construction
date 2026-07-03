@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | Studio Bind Architects</title>
+  <meta name="description" content="Studio Bind Architects – Chennai's most trusted luxury home construction and interior design company. 50+ projects completed. Get your free consultation today.">
+  <meta name="keywords" content="construction company Chennai, home construction, luxury villa construction, interior design Chennai, house construction, builders Chennai, architects Chennai">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.Studio Bindconstructions.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Studio Bind Architects – Build Your Dream Home">
+  <meta property="og:description" content="Premium luxury home construction and interior design in Chennai. 50+ projects, 15+ years experience, 98% customer satisfaction.">
+  <meta property="og:image" content="assets/images/sk-complex.jpg">
+  <meta property="og:url" content="https://www.Studio Bindconstructions.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Studio Bind Architects">
+  <meta name="twitter:description" content="Premium luxury home construction and interior design in Chennai.">
+  <meta name="twitter:image" content="assets/images/sk-complex.jpg">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Studio Bind Architects",
+    "description": "Premium luxury home construction and interior design company in Chennai",
+    "url": "https://www.Studio Bindconstructions.com",
+    "telephone": "+91 8072701454",
+    "email": "info@Studio Bindconstructions.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B28, 2nd Cross St, Kurinji Nagar, Ramapuram",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600089",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.0451,
+      "longitude": 80.2468
+    },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "priceRange": "₹₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "487"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css?v=3">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css?v=3">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <style>
+    /* ── Home-page specific overrides ── */
+    .about-section { background: var(--c-ivory); }
+    .services-section { background: var(--c-white); }
+    .packages-section { background: var(--c-beige); }
+    .process-section { background: var(--c-white); }
+    .testimonials-section { background: var(--c-ivory); }
+    .blog-section { background: var(--c-white); }
+    .faq-section { background: var(--c-beige); }
+
+    .hero-video-play {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      color: rgba(255,255,255,0.8); font-size: 0.875rem; font-weight: 500;
+      transition: color 0.3s;
+    }
+    .hero-video-play:hover { color: var(--c-gold-light); }
+    .play-circle {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s; flex-shrink: 0;
+    }
+    .hero-video-play:hover .play-circle { background: var(--c-gold); border-color: var(--c-gold); }
+
+    /* Packages toggle */
+    .pkg-toggle { display: flex; gap: 0; background: var(--c-white); border-radius: 50px; padding: 4px; box-shadow: var(--shadow-sm); }
+    .pkg-toggle-btn { padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; color: var(--c-text-muted); transition: all 0.3s; cursor: none; }
+    .pkg-toggle-btn.active { background: var(--c-navy); color: white; }
+
+    /* Stats section */
+    .stats-band { background: linear-gradient(135deg, var(--c-navy) 0%, #0a1520 100%); padding: 5rem 0; }
+    .stats-band-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
+    @media(max-width:960px){ .stats-band-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:540px){ .stats-band-grid { grid-template-columns: repeat(2,1fr); } }
+
+    /* Process timeline vertical */
+    .process-vertical { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .process-vertical::before {
+      content: '';
+      position: absolute;
+      left: 28px; top: 28px; bottom: 28px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--c-gold), rgba(201,168,76,0.1));
+    }
+    .process-v-item { display: flex; gap: 1.5rem; align-items: flex-start; padding-bottom: 2.5rem; position: relative; }
+    .process-v-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--c-gold); color: var(--c-navy);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--f-display); font-weight: 800; font-size: 1.1rem;
+      flex-shrink: 0; box-shadow: var(--shadow-gold); z-index: 1;
+    }
+    .process-v-content { padding-top: 0.75rem; }
+    .process-v-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.375rem; }
+
+    /* Blog preview */
+    .blog-preview-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1.5rem; }
+    @media(max-width:960px){ .blog-preview-grid { grid-template-columns: 1fr; } }
+
+    /* Sticky CTA bar (mobile) */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--c-navy); padding: 1rem 1.5rem;
+      display: flex; gap: 0.75rem;
+      z-index: 150;
+      transform: translateY(100%); opacity: 0;
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      border-top: 1px solid rgba(201,168,76,0.3);
+    }
+    .sticky-cta .btn { flex: 1; justify-content: center; padding: 0.875rem 1rem; }
+    @media(min-width:769px){ .sticky-cta { display: none; } }
+
+    /* Brands marquee */
+    .marquee-wrapper { overflow: hidden; position: relative; }
+    .marquee-track {
+      display: flex; gap: 3rem; align-items: center;
+      animation: marquee 20s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+
+    /* Section decorative number */
+    .deco-number {
+      position: absolute; right: 2rem; top: -1rem;
+      font-family: var(--f-display); font-size: 8rem; font-weight: 900;
+      color: rgba(201,168,76,0.06); line-height: 1; pointer-events: none;
+      user-select: none;
+    }
+
+    /* Why cards grid */
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    @media(max-width:960px){ .why-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:640px){ .why-grid { grid-template-columns: 1fr; } }
+
+    /* Google review stars */
+    .google-rating { display: flex; align-items: center; gap: 0.5rem; }
+    .google-rating .stars { color: var(--c-gold); letter-spacing: -1px; font-size: 1rem; }
+  
+    .entry-modal-overlay { cursor: auto !important; }
+    .entry-modal { cursor: auto !important; }
+    .entry-modal-close { cursor: pointer !important; }
+    .entry-modal .form-control { cursor: text !important; }
+    .entry-modal .btn-submit { cursor: pointer !important; }
+    .entry-modal * { cursor: auto; }
+  </style>
+
+
+  
+  <style>
+    /* ── ENTRY ENQUIRY MODAL ── */
+    .entry-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .entry-modal-overlay.active { opacity: 1 !important; visibility: visible !important; }
+    .entry-modal { width: 95%; max-width: 860px; border-radius: 12px; overflow: visible; box-shadow: 0 25px 70px rgba(0,0,0,0.5); transform: translateY(24px) scale(0.98); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s ease; position: relative; display: flex; flex-direction: row; }
+    .entry-modal-overlay.active .entry-modal { transform: translateY(0) scale(1); }
+    @media (max-width: 700px) { .entry-modal { flex-direction: column; max-height: 92vh; overflow-y: auto; border-radius: 12px; overflow-x: hidden; } }
+
+    /* Close button */
+    .entry-modal-close { position: absolute; top: -16px; right: -16px; background: #0c1d2e; color: #fff; border: 2px solid rgba(255,255,255,0.5); width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 20; box-shadow: 0 4px 14px rgba(0,0,0,0.35); transition: transform 0.2s; }
+    .entry-modal-close:hover { transform: scale(1.1); }
+
+    /* ── LEFT: Form panel ── */
+    .em-left { flex: 0 0 44%; background: #06101a; display: flex; flex-direction: column; border-radius: 12px 0 0 12px; overflow: hidden; }
+    .em-header { background: #d3ad4f; color: #06101a; padding: 1.25rem 1rem; text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+    .em-body { padding: 1.75rem 1.5rem; flex: 1; }
+
+    .em-form-group { margin-bottom: 1.1rem; }
+    .em-label { display: block; font-size: 0.85rem; color: #e2e8f0; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.3px; }
+    .em-label span { color: #d3ad4f; margin-left: 2px; }
+    .em-input-wrap { position: relative; }
+    .em-form-control { width: 100%; padding: 0.72rem 2.6rem 0.72rem 0.9rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; font-size: 0.9rem; background: transparent; color: #fff; transition: border-color 0.25s, box-shadow 0.25s; font-family: 'Inter', sans-serif; box-sizing: border-box; }
+    .em-form-control::placeholder { color: rgba(255,255,255,0.4); font-size: 0.88rem; }
+    .em-form-control:focus { outline: none; border-color: #d3ad4f; }
+    select.em-form-control { appearance: none; -webkit-appearance: none; color: #fff; cursor: pointer; }
+    select.em-form-control option { background: #06101a; }
+    .em-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #d3ad4f; pointer-events: none; }
+
+    /* Phone row */
+    .em-phone-row { display: flex; gap: 0; }
+    .em-flag-box { background: transparent; border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 6px 0 0 6px; padding: 0 10px; display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+    .em-phone-row .em-form-control { border-radius: 0 6px 6px 0; }
+
+    /* Submit */
+    .em-submit-btn { width: 100%; background: #d3ad4f; color: #06101a; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem; border: none; padding: 0.9rem 1rem; border-radius: 6px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.2s, transform 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; }
+    .em-submit-btn:hover { opacity: 0.9; }
+
+    /* ── RIGHT: Branding panel ── */
+    .em-right { flex: 0 0 56%; background: #f4efeb; padding: 2.5rem; display: flex; flex-direction: column; position: relative; justify-content: space-between; border-radius: 0 12px 12px 0; }
+    /* subtle architecture sketch watermark */
+    .em-right::after { content: ''; position: absolute; right: 0; bottom: 0; width: 100%; height: 60%; background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=40') no-repeat bottom right / cover; opacity: 0.08; pointer-events: none; mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+
+    .em-logo { margin-bottom: 0; max-width: 260px; margin-left: auto; margin-right: auto; }
+    .em-text-block { display: flex; flex-direction: column; flex: 1; margin: 1.5rem 0; z-index: 1; }
+    
+    .em-title { font-family: 'Inter', sans-serif; font-size: 2.4rem; line-height: 1.15; color: #06101a; letter-spacing: -0.5px; }
+    .em-title .light { font-weight: 300; display: block; color: #333; }
+    .em-title .heavy { font-weight: 900; display: block; }
+    .em-title .gold { color: #d3ad4f; font-weight: 800; display: block; font-style: italic; }
+
+    .em-footer { text-align: center; position: relative; padding-top: 1.5rem; z-index: 1; margin-top: auto; }
+    .em-footer::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: #d3ad4f; opacity: 0.4; }
+    .em-footer-icon { color: #d3ad4f; background: #f4efeb; padding: 0 12px; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); display: inline-flex; }
+    .em-footer-text { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.85rem; color: #06101a; letter-spacing: 1.5px; text-transform: uppercase; line-height: 1.4; }
+</style>
+
+
+
+<style>
+  /* Force logo color */
+  .navbar-logo, .bind-logo-svg { color: white !important; }
+  .navbar.scrolled .navbar-logo, .navbar.scrolled .bind-logo-svg { color: var(--c-navy) !important; }
+</style>
+
+
+<style>
+  /* ── Premium Loading Screen ── */
+  
+    100%     { opacity: 1; }
+  }
+
+  /* Top rule above logo */
+  .loader-rule {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+    margin-bottom: 1.6rem;
+    animation: loaderFadeIn 0.6s 0.1s ease both;
+  }
+
+  .loading-logo {
+    animation: loaderFadeIn 0.8s 0.2s ease both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loader-sub {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.6rem;
+    animation: loaderSubFade 1s 0.5s ease both;
+  }
+
+  .loader-divider {
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,0.25);
+    margin: 1.4rem 0 1.2rem;
+    animation: loaderFadeIn 0.6s 0.5s ease both;
+  }
+
+  .loading-bar-wrap {
+    width: 160px;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    animation: loaderFadeIn 0.6s 0.6s ease both;
+  }
+  .loading-bar {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 0%;
+    background: rgba(255,255,255,0.7);
+    animation: loaderLineGrow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.5s;
+  }
+  .loading-tagline {
+    margin-top: 1.2rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.22);
+    animation: loaderSubFade 1.2s 1s ease both;
+  }
+</style>
+</head>
+
+<body class="loading">
+
+<!-- ── Loading Screen ── -->
+<div id="loading-screen">
+  <div class="loader-rule"></div>
+  <div class="loading-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" style="height:80px; width:auto; color:white;">
+      <text x="50%" y="92" text-anchor="middle" font-family="'Bauhaus 93', sans-serif" font-weight="normal" font-size="95px" fill="currentColor" letter-spacing="2px">BIND</text>
+    </svg>
+    <div class="loader-sub">Architecture &nbsp;&nbsp;|&nbsp;&nbsp; Interior &nbsp;&nbsp;|&nbsp;&nbsp; Construction</div>
+  </div>
+  <div class="loader-divider"></div>
+  <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
+  <div class="loading-tagline">Crafting Premium Spaces Since 2010</div>
+</div>
+
+<!-- ── Page Transition ── -->
+<div class="page-transition"></div>
+
+<!-- ── Custom Cursor ── -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ── Lightbox ── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button id="lightbox-close" aria-label="Close image">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="" loading="lazy">
+</div>
+
+<!-- ── NAVBAR ── -->
+<header>
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-inner">
+        <!-- Logo -->
+        <a href="index.html" class="navbar-logo"><svg class="bind-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" style="height:45px; width:auto;">
+    <text x="50%" y="85" text-anchor="middle" font-family="'Bauhaus 93', sans-serif" font-weight="normal" font-size="95px" fill="currentColor" letter-spacing="1px">BIND</text>
+    <text x="50%" y="130" text-anchor="middle" font-family="\'Inter\', sans-serif" font-weight="500" font-size="16px" fill="currentColor" letter-spacing="4px" opacity="0.6">ARCHITECTURE | INTERIOR | CONSTRUCTION</text>
+  </svg></a>
+
+        <!-- Desktop Menu -->
+        <ul class="navbar-menu" role="list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          
+          <li class="nav-item"><a href="packages.html" class="nav-link">Construction Packages</a></li>
+<li class="nav-item"><a href="design-packages.html" class="nav-link">Design Packages</a>
+    </li><li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                              <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- CTA + Dark Toggle -->
+        <div class="navbar-cta">
+          <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"></button>
+          <a href="#" onclick="openEntryModal(event)" class="btn btn-primary btn-sm" id="nav-quote-btn">GET FREE QUOTE</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    
+    <a href="packages.html" class="nav-link">Construction Packages</a><a href="design-packages.html" class="nav-link">Design Packages</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    
+    
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="#" onclick="openEntryModal(event)" class="btn btn-primary" style="margin-top:1rem;">Get Free Quote</a>
+  </div>
+</header>
+
+<style>
+  /* ── PROJECTS PAGE STYLES ── */
+  .projects-hero {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: var(--c-navy);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .projects-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+    opacity: 0.12;
+  }
+  .projects-hero .container { position: relative; z-index: 1; }
+  .projects-hero-eyebrow {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--c-gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0.4rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+  }
+  .projects-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+  }
+  .projects-hero-title span { color: var(--c-gold); }
+  .projects-hero-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  /* Filter Tabs */
+  .projects-filter-bar {
+    background: var(--c-ivory);
+    padding: 2.5rem 0 0;
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .projects-filter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 1.25rem;
+  }
+  .filter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-text-muted);
+    margin-right: 0.5rem;
+  }
+  .filter-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--c-text-muted);
+    background: transparent;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .filter-btn:hover { border-color: var(--c-gold); color: var(--c-navy); }
+  .filter-btn.active {
+    background: var(--c-navy);
+    border-color: var(--c-navy);
+    color: white;
+    box-shadow: 0 4px 14px rgba(10,25,44,0.25);
+  }
+  .filter-count {
+    font-size: 0.7rem;
+    background: rgba(201,168,76,0.2);
+    color: var(--c-gold);
+    border-radius: 50px;
+    padding: 1px 7px;
+    margin-left: 5px;
+    font-weight: 700;
+  }
+
+  /* Projects Grid */
+  .projects-section {
+    background: var(--c-ivory);
+    padding: 4rem 0 6rem;
+  }
+  .projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+  @media(max-width: 1024px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width: 640px) { .projects-grid { grid-template-columns: 1fr; } }
+
+  .project-card {
+    background: transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+  }
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+  }
+  .project-card.hidden { display: none; }
+  .project-card.featured {
+    grid-column: span 2;
+  }
+  @media(max-width: 640px) { .project-card.featured { grid-column: span 1; } }
+
+  .project-img-wrap {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+  .project-card.featured .project-img-wrap {
+    height: 100%; aspect-ratio: 16/9; }
+
+  .project-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .project-card:hover .project-img-wrap img { transform: scale(1.07); }
+
+  .project-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--c-gold);
+    color: var(--c-navy);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+  }
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,25,44,0.8) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+  }
+  .project-card:hover .project-overlay { opacity: 1; }
+  .project-overlay-text {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .project-overlay-text svg { flex-shrink: 0; }
+
+  .project-body { padding: 1.5rem; }
+  .project-cat {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    margin-bottom: 0.5rem;
+  }
+  .project-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .project-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: var(--c-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .project-meta {
+    display: flex;
+    gap: 1.25rem;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding-top: 0.875rem;
+    flex-wrap: wrap;
+  }
+  .project-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    font-weight: 500;
+  }
+  .project-meta-item svg { color: var(--c-gold); flex-shrink: 0; }
+
+  /* Stats Band */
+  .proj-stats-band {
+    background: linear-gradient(135deg, var(--c-navy) 0%, #0a1520 100%);
+    padding: 5rem 0;
+  }
+  .proj-stats-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+  @media(max-width: 768px) { .proj-stats-grid { grid-template-columns: repeat(2,1fr); } }
+  .proj-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--c-gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .proj-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* Project CTA */
+  .proj-cta {
+    background: var(--c-beige);
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  .proj-cta-inner { max-width: 680px; margin: 0 auto; }
+  .proj-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: var(--c-navy);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .proj-cta p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: var(--c-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .proj-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* No results */
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 5rem 2rem;
+    display: none;
+  }
+  .no-results.show { display: block; }
+  .no-results p {
+    font-family: 'Inter', sans-serif;
+    color: var(--c-text-muted);
+    font-size: 1rem;
+  }
+</style>
+
+  <!-- ── PROJECTS HERO ── -->
+  <section class="projects-hero">
+    <div class="container">
+      <div class="projects-hero-eyebrow">50+ Projects Completed</div>
+      <h1 class="projects-hero-title">Our <span>Signature</span> Projects</h1>
+      <p class="projects-hero-sub">From luxury villas to premium interiors — explore the spaces we've built across Chennai with passion and precision.</p>
+      <a href="contact.html" class="btn btn-primary" id="projects-cta-btn">Start Your Project →</a>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS GRID ── -->
+  <section class="projects-section">
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- Project 1: SK Constructions -->
+      <article class="project-card" data-category="commercial">
+        <div class="project-img-wrap">
+          <img src="assets/images/sk-complex.jpg" alt="SK Complex Project" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: P.D.S. Banquet Hall -->
+      <article class="project-card" data-category="commercial">
+        <div class="project-img-wrap">
+          <img src="assets/images/pds-banquet-hall.jpg" alt="P.D.S. Banquet Hall" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Ongoing Construction -->
+      <article class="project-card" data-category="ongoing">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-3.jpg" alt="Ongoing Construction Site" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Prabhakaran & Ananthi Residence -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-4.jpg" alt="Prabhakaran & Ananthi Residence" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Premium Bathroom Interior -->
+      <article class="project-card" data-category="interior">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-5.jpg" alt="Premium Bathroom Interior" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Project 6 -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-6.jpg" alt="Project 6" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 7 -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-7.jpg" alt="Project 7" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 8 -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-8.jpg" alt="Project 8" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 9 -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-9.jpg" alt="Project 9" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 10 -->
+      <article class="project-card" data-category="residential">
+        <div class="project-img-wrap">
+          <img src="assets/images/project-10.jpg" alt="Project 10" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-overlay-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Details
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <script>
+    // ── Project Filter Logic ──
+    (function() {
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var cards = document.querySelectorAll('.project-card[data-category]');
+      var noResults = document.getElementById('no-results');
+
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var filter = this.getAttribute('data-filter');
+
+          // Update active button
+          filterBtns.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+
+          // Show/hide cards
+          var visibleCount = 0;
+          cards.forEach(function(card) {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.classList.remove('hidden');
+              // Re-animate
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(function() {
+                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+              visibleCount++;
+              // Featured class only for first villa or all view
+              if (filter === 'all' && card.id === 'proj-card-1') {
+                card.classList.add('featured');
+              } else {
+                card.classList.remove('featured');
+              }
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          // Show no-results if needed
+          if (noResults) {
+            noResults.classList.toggle('show', visibleCount === 0);
+          }
+        });
+      });
+    })();
+  </script>
+
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div>
+          <a href="index.html" class="navbar-logo" style="margin-bottom:1rem;display:inline-flex;"><svg class="bind-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" style="height:90px; width:auto; color: white; animation: pulseLogo 2.5s infinite alternate ease-in-out;">
+    <text x="50%" y="85" text-anchor="middle" font-family="'Bauhaus 93', sans-serif" font-weight="normal" font-size="95px" fill="currentColor" letter-spacing="1px">BIND</text>
+    <text x="50%" y="130" text-anchor="middle" font-family="\'Inter\', sans-serif" font-weight="500" font-size="16px" fill="currentColor" letter-spacing="4px" opacity="0.6">ARCHITECTURE | INTERIOR | CONSTRUCTION</text>
+  </svg></a>
+          <p class="footer-brand-desc">Chennai's premier luxury construction and interior design company. Building dreams since 2009 with unmatched quality, transparency, and craftsmanship.</p>
+          <div class="google-rating" style="margin-bottom:1.25rem;">
+            <span style="color:rgba(255,255,255,0.5);font-size:0.8rem;">Google</span>
+            <span style="color:var(--c-gold);">★★★★★</span>
+            <span style="color:white;font-weight:700;">4.9</span>
+            <span style="color:rgba(255,255,255,0.4);font-size:0.8rem;">(487)</span>
+          </div>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/bindarchitects/" class="footer-social" aria-label="Facebook" title="Follow on Facebook" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/studio_bind/" class="footer-social" aria-label="Instagram" title="Follow on Instagram" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCTI09wWkEJeNy7wXwD4zSCQ" class="footer-social" aria-label="YouTube" title="Watch on YouTube" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="var(--c-navy)"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/studio-bind-architects/" class="footer-social" aria-label="LinkedIn" title="Connect on LinkedIn" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <nav class="footer-links" aria-label="Quick links">
+            <a href="about.html" class="footer-link">→ About Us</a>
+            <a href="packages.html" class="footer-link">→ Packages & Pricing</a>
+            <a href="projects.html" class="footer-link">→ Our Projects</a>
+            <a href="faq.html" class="footer-link">→ FAQ</a>
+            <a href="contact.html" class="footer-link">→ Contact Us</a>
+            <a href="#" id="download-brochure" class="footer-link">→ Download Brochure</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer-heading">Get In Touch</h3>
+          <address style="font-style:normal;">
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="footer-contact-label">Ar.Parthiban Moorthy</div>
+                <a href="tel:+91 8072701454" class="footer-contact-text">+91 8072701454</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="footer-contact-label">Email Us</div>
+                <a href="mailto:bindarchitects@gmail.com" class="footer-contact-text">bindarchitects@<wbr>gmail.com</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="footer-contact-label">Office Address</div>
+                <span class="footer-contact-text">B28, 2nd Cross St, Kurinji Nagar, Ramapuram, Chennai – 600089</span>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="footer-contact-label">Working Hours</div>
+                <span class="footer-contact-text">Mon–Sat: 9 AM – 7 PM</span>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2025 Studio Bind Architects. All rights reserved. RERA Reg: TN/01/2019/0042</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Floating Buttons ── -->
+<a href="https://wa.me/918072701454?text=Hi%2C%20I%27d%20like%20to%20get%20a%20free%20consultation%20for%20home%20construction."
+   class="floating-whatsapp" id="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.989 0C5.374 0 0 5.373 0 11.988c0 2.164.568 4.192 1.558 5.947L0 24l6.208-1.529A11.94 11.94 0 0011.989 24C18.614 24 24 18.627 24 12.012 24 5.374 18.614 0 11.989 0zm0 21.818c-1.87 0-3.626-.496-5.144-1.363l-.37-.218-3.684.907.948-3.578-.241-.379A9.789 9.789 0 012.18 12c0-5.409 4.4-9.808 9.809-9.808 5.41 0 9.808 4.399 9.808 9.808 0 5.408-4.398 9.818-9.808 9.818z"/></svg>
+</a>
+
+<a href="tel:+91 8072701454" class="floating-call" id="call-btn" aria-label="Call us" title="Call Now">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- Mobile Sticky CTA -->
+<div class="sticky-cta" role="complementary" aria-label="Quick contact actions">
+  <a href="tel:+91 8072701454" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);" id="mobile-call-btn">📞 Call Now</a>
+  <a href="contact.html" class="btn btn-primary" id="mobile-quote-btn">Get Free Quote</a>
+</div>
+
+<!-- Scripts -->
+<script src="js/cursor.js"></script>
+<script src="js/main.js"></script>
+<!-- ENTRY ENQUIRY MODAL -->
+
+<div class="entry-modal-overlay" id="entry-modal">
+  <div class="entry-modal">
+    <button class="entry-modal-close" id="entry-modal-close" aria-label="Close modal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    
+    <!-- Left Column -->
+    <div class="em-left">
+      <div class="em-header">GET A FREE QUOTE !!</div>
+      <div class="em-body">
+        <form id="entry-enquiry-form">
+          <div class="em-form-group">
+            <label class="em-label">Name <span>*</span></label>
+            <div class="em-input-wrap">
+              <input type="text" class="em-form-control" placeholder="Enter your Name" required>
+              <svg class="em-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+          </div>
+          
+          <div class="em-form-group">
+            <label class="em-label">Mobile Number <span>*</span></label>
+            <div class="em-input-wrap em-phone-row">
+              <div class="em-flag-box">
+                <img src="https://flagcdn.com/w20/in.png" width="20" alt="India">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <input type="tel" class="em-form-control" placeholder="Enter mobile number" required>
+              <svg class="em-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+          </div>
+          
+          <div class="em-form-group">
+            <label class="em-label">Email ID <span>*</span></label>
+            <div class="em-input-wrap">
+              <input type="email" class="em-form-control" placeholder="Enter your Email ID" required>
+              <svg class="em-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+          </div>
+          
+          <div class="em-form-group">
+            <label class="em-label">Location (Area) <span>*</span></label>
+            <div class="em-input-wrap">
+              <input type="text" class="em-form-control" placeholder="Enter your location / area" required>
+              <svg class="em-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+          </div>
+          
+          <div class="em-form-group">
+            <label class="em-label">Amount (Budget) <span>*</span></label>
+            <div class="em-input-wrap">
+              <select class="em-form-control" required>
+                <option value="" disabled selected>Select Budget</option>
+                <option value="Less than ₹25 Lakhs">Less than ₹25 Lakhs</option>
+                <option value="₹25 - ₹50 Lakhs">₹25 - ₹50 Lakhs</option>
+                <option value="₹50 - ₹75 Lakhs">₹50 - ₹75 Lakhs</option>
+                <option value="₹75 Lakhs - ₹1 Crore">₹75 Lakhs - ₹1 Crore</option>
+                <option value="₹1 Crore+">₹1 Crore+</option>
+              </select>
+              <svg class="em-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="pointer-events:none;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          
+          <button type="submit" class="em-submit-btn">GET FREE QUOTE &rarr;</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="em-right">
+      <div class="em-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" style="height:72px; width:100%; display:block; margin:auto;">
+          <text x="50%" y="90" text-anchor="middle" font-family="'Bauhaus 93', sans-serif" font-weight="normal" font-size="95px" fill="#0c1d2e" letter-spacing="1px">BIND</text>
+          <text x="50%" y="130" text-anchor="middle" font-family="\'Inter\', sans-serif" font-weight="500" font-size="16px" fill="currentColor" letter-spacing="4px" opacity="0.6">ARCHITECTURE | INTERIOR | CONSTRUCTION</text>
+        </svg>
+      </div>
+      
+            <div class="em-text-block">
+        <div style="border-left: 4px solid #d3ad4f; padding-left: 1.5rem; margin-bottom: 0px;">
+          <div class="em-title">
+            <span class="light">BUILDING</span>
+            <span class="light">DREAMS</span>
+            <span class="heavy">CREATING</span>
+            <span class="heavy">SPACES</span>
+            <span class="light">IN</span>
+          </div>
+        </div>
+        <div class="em-title" style="padding-left: calc(1.5rem + 4px);">
+          <span class="gold">INDIA</span>
+        </div>
+      </div>
+      
+      <div class="em-footer">
+        <div class="em-footer-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d3ad4f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v3"/><path d="M8 12v3"/><path d="M16 12v3"/></svg>
+        </div>
+        <div class="em-footer-text">
+          TURNKEY CONSTRUCTION<br>SERVICES
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+</div>
+<script>
+/* Modal auto-open disabled on this page */
+</script>
+
+<script src="js/animations.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/calculator.js"></script>
+
+<!-- Initialize hamburger after DOM -->
+<script>
+  document.getElementById('hamburger')?.addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-menu')?.classList.toggle('open');
+  });
+  // Active dot styling for testimonials
+  document.querySelectorAll('.testimonial-dot').forEach((dot, i) => {
+    dot.style.cssText = i === 0
+      ? 'width:32px;height:6px;border-radius:3px;background:var(--c-gold);border:none;transition:all 0.3s;cursor:none;'
+      : 'width:6px;height:6px;border-radius:3px;background:var(--c-beige-dark);border:none;transition:all 0.3s;cursor:none;';
+  });
+  </script>
+
+<script>
+  function openEntryModal(e) {
+    if(e) e.preventDefault();
+    var modal = document.getElementById('entry-modal');
+    if(modal) {
+      modal.classList.add('active');
+      modal.style.opacity = '1';
+      modal.style.visibility = 'visible';
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeEntryModal() {
+    var modal = document.getElementById('entry-modal');
+    if(modal) {
+      modal.classList.remove('active');
+      modal.style.opacity = '0';
+      modal.style.visibility = 'hidden';
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var closeBtn = document.getElementById('entry-modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeEntryModal);
+    }
+    var modal = document.getElementById('entry-modal');
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) { closeEntryModal(); }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
