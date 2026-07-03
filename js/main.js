@@ -35,30 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
   }
 
-  // ── Mobile hamburger ─────────────────────────────────────
-  const hamburgers = document.querySelectorAll('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  if (hamburgers.length > 0 && mobileMenu) {
-    hamburgers.forEach(hamburger => {
-      hamburger.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const isOpen = !hamburger.classList.contains('open');
-        
-        hamburgers.forEach(h => h.classList.toggle('open', isOpen));
-        mobileMenu.classList.toggle('open', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-    });
-    // Close on link click
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburgers.forEach(h => h.classList.remove('open'));
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
+  // ── Mobile hamburger (Delegated to inline script in HTML) ──
 
   // ── Dark Mode Toggle ─────────────────────────────────────
   const darkToggles = document.querySelectorAll('.dark-toggle');

@@ -812,5 +812,30 @@
   });
 </script>
 
+<script>
+  (function() {
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = !hamburger.classList.contains('open');
+        hamburger.classList.toggle('open', isOpen);
+        mobileMenu.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      // Close on link click
+      var links = mobileMenu.getElementsByTagName('a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+    }
+  })();
+</script>
 </body>
 </html>
