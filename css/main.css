@@ -1032,8 +1032,11 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   font-size: 0.95rem;
 }
 .spec-table tr:hover td {
-  background: rgba(22, 32, 50, 0.02);
+  background: rgba(22, 32, 50, 0.05);
   color: var(--c-navy);
+}
+.spec-table td:nth-child(even) {
+  background: rgba(22, 32, 50, 0.03);
 }
 .spec-table td.highlight {
   background: rgba(201, 168, 76, 0.08);
