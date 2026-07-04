@@ -1552,9 +1552,9 @@
     
     headers.forEach(header => {
       header.addEventListener('click', function() {
-        // Extract category name by removing the '+' or '-' text (the span)
+        // Extract category name by removing the '+' or '-' text
         let clone = this.cloneNode(true);
-        let span = clone.querySelector('span');
+        let span = clone.querySelector('.pkg-accordion-toggle');
         if(span) clone.removeChild(span);
         let categoryName = clone.textContent.trim();
         
