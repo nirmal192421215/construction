@@ -1147,6 +1147,13 @@
               <option value="2" selected>G + 1</option>
               <option value="3">G + 2</option>
               <option value="4">G + 3</option>
+              <option value="5">G + 4</option>
+              <option value="6">G + 5</option>
+              <option value="7">G + 6</option>
+              <option value="8">G + 7</option>
+              <option value="9">G + 8</option>
+              <option value="10">G + 9</option>
+              <option value="11">G + 10</option>
             </select>
           </div>
           <div style="display: flex; align-items: center; gap: 1rem;">
@@ -1243,13 +1250,13 @@
       const tbody = document.getElementById('adv-calc-body');
       const totalEl = document.getElementById('adv-calc-total');
       
-      const floorNames = ['Ground Floor', 'First Floor', 'Second Floor', 'Third Floor'];
+      const floorNames = ['Ground Floor', 'First Floor', 'Second Floor', 'Third Floor', 'Fourth Floor', 'Fifth Floor', 'Sixth Floor', 'Seventh Floor', 'Eighth Floor', 'Ninth Floor', 'Tenth Floor'];
       
       // State
       let state = {
         floors: 2,
         pkgRate: 2399,
-        floorAreas: ['', '', '', ''],
+        floorAreas: Array(11).fill(''),
         sump: '',
         septic: '',
         compoundL: '',
@@ -1267,7 +1274,7 @@
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Enter required Built up Area for ${floorNames[i]}</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">
-                <input type="number" class="adv-input-floor" data-idx="${i}" value="${area}" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                <input type="number" class="adv-input-floor" data-idx="${i}" value="${area}" placeholder="Area in sqft" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">sqft</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹${state.pkgRate}</td>
@@ -1281,7 +1288,7 @@
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of RCC Water Sump (A 4 member family will require 9000 liter capacity)</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">
-                <input type="number" id="adv-input-sump" value="${state.sump}" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                <input type="number" id="adv-input-sump" value="${state.sump}" placeholder="No. of Liters" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">ltr</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹24</td>
@@ -1294,7 +1301,7 @@
             <tr style="border-bottom: 1px solid #eee;">
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of Septic Tank</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">
-                <input type="number" id="adv-input-septic" value="${state.septic}" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                <input type="number" id="adv-input-septic" value="${state.septic}" placeholder="No. of Liters" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
               </td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">ltr</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: right;">₹24</td>
