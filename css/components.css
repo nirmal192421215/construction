@@ -1487,3 +1487,24 @@ footer::before {
   color: var(--c-text);
 }
 
+
+
+/* ── Spec Table Dark Mode ── */
+[data-theme="dark"] .spec-table th, 
+[data-theme="dark"] .spec-table td {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .spec-table th {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--c-text);
+}
+[data-theme="dark"] .spec-table td {
+  color: var(--c-text);
+}
+[data-theme="dark"] .spec-table tr:hover td {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--c-text);
+}
+[data-theme="dark"] .spec-table td:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
