@@ -317,3 +317,40 @@ if (packageNav) {
     });
   });
 }
+
+
+// ── CUSTOM CURSOR ── //
+document.addEventListener('DOMContentLoaded', () => {
+  const cursorDot = document.getElementById('cursor-dot');
+  const cursorRing = document.getElementById('cursor-ring');
+  
+  if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
+    // Hide default cursor on desktop
+    document.body.style.cursor = 'none';
+    const style = document.createElement('style');
+    style.innerHTML = 'a, button, input, textarea, select, .nav-link, .btn { cursor: none !important; }';
+    document.head.appendChild(style);
+
+    document.addEventListener('mousemove', (e) => {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+      
+      // Add slight delay to ring using requestAnimationFrame for smoother effect
+      requestAnimationFrame(() => {
+        cursorRing.style.left = e.clientX + 'px';
+        cursorRing.style.top = e.clientY + 'px';
+      });
+    });
+    
+    // Add hover states
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select');
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursorRing.classList.add('hovering');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursorRing.classList.remove('hovering');
+      });
+    });
+  }
+});
