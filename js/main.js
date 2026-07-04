@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const msgElement = document.getElementById('cf-message');
       const msg = msgElement ? msgElement.value : '';
       
-      const text = `Hi Studio Bind Architects! I'd like to make an enquiry.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Location:* ${location}%0A*Budget:* ${budget}%0A*Message:* ${msg}`;
+      const text = `Hi BIND BUILD STUDIO! I'd like to make an enquiry.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Location:* ${location}%0A*Budget:* ${budget}%0A*Message:* ${msg}`;
       const whatsappUrl = `https://wa.me/918072701454?text=${text}`;
       
       window.open(whatsappUrl, '_blank');
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = inputs[2] ? inputs[2].value : '';
       const city = inputs[3] ? inputs[3].value : '';
       
-      const text = `Hi Studio Bind Architects! I'd like to get a free quote.%0A%0A*Name:* ${name}%0A*Mobile:* ${phone}%0A*Email:* ${email}%0A*City:* ${city}`;
+      const text = `Hi BIND BUILD STUDIO! I'd like to get a free quote.%0A%0A*Name:* ${name}%0A*Mobile:* ${phone}%0A*Email:* ${email}%0A*City:* ${city}`;
       const whatsappUrl = `https://wa.me/918072701454?text=${text}`;
       
       window.open(whatsappUrl, '_blank');
