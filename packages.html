@@ -1570,7 +1570,7 @@
         if (!isCurrentlyOpen) {
           document.querySelectorAll('.pkg-accordion-header').forEach(h => {
             let hClone = h.cloneNode(true);
-            let hSpan = hClone.querySelector('span');
+            let hSpan = hClone.querySelector('.pkg-accordion-toggle');
             if(hSpan) hClone.removeChild(hSpan);
             let hName = hClone.textContent.trim();
             
