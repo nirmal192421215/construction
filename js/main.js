@@ -328,29 +328,39 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hide default cursor on desktop
     document.body.style.cursor = 'none';
     const style = document.createElement('style');
-    style.innerHTML = 'a, button, input, textarea, select, .nav-link, .btn { cursor: none !important; }';
+    style.innerHTML = 'a, button, input, textarea, select, .nav-link, .btn, .hover-target { cursor: none !important; }';
     document.head.appendChild(style);
 
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+
     document.addEventListener('mousemove', (e) => {
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-      
-      // Add slight delay to ring using requestAnimationFrame for smoother effect
-      requestAnimationFrame(() => {
-        cursorRing.style.left = e.clientX + 'px';
-        cursorRing.style.top = e.clientY + 'px';
-      });
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      // Dot follows instantly
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
     });
     
+    // Ring trailing animation loop
+    const render = () => {
+      ringX += (mouseX - ringX) * 0.15;
+      ringY += (mouseY - ringY) * 0.15;
+      
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      
+      requestAnimationFrame(render);
+    };
+    requestAnimationFrame(render);
+    
     // Add hover states
-    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select');
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .nav-link, .btn, .hover-target, .package-card, .masonry-item');
     interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursorRing.classList.add('hovering');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursorRing.classList.remove('hovering');
-      });
+      el.addEventListener('mouseenter', () => cursorRing.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovering'));
     });
   }
 });
