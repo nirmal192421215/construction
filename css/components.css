@@ -136,7 +136,7 @@
   background: rgba(255,255,255,0.2);
   border-radius: var(--r-full);
   position: relative;
-  cursor: none;
+  
   transition: background var(--t-base);
   border: 1.5px solid rgba(255,255,255,0.3);
 }
@@ -160,7 +160,7 @@
   flex-direction: column;
   gap: 5px;
   padding: var(--sp-2);
-  cursor: none;
+  
 }
 .hamburger span {
   display: block;
@@ -869,7 +869,7 @@ footer::before {
   align-items: center;
   justify-content: space-between;
   padding: var(--sp-5) var(--sp-6);
-  cursor: none;
+  
   transition: background var(--t-fast);
 }
 .faq-question:hover { background: var(--c-ivory); }
@@ -1006,7 +1006,7 @@ footer::before {
   align-items: center;
   justify-content: center;
   color: white;
-  cursor: none;
+  
   transition: background var(--t-base);
 }
 #lightbox-close:hover { background: var(--c-gold); }
@@ -1100,7 +1100,7 @@ footer::before {
   background: var(--c-beige);
   border: 1.5px solid transparent;
   transition: all var(--t-base);
-  cursor: none;
+  
 }
 .filter-tab:hover, .filter-tab.active {
   background: var(--c-gold);

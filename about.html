@@ -93,7 +93,7 @@
 
     /* Packages toggle */
     .pkg-toggle { display: flex; gap: 0; background: var(--c-white); border-radius: 50px; padding: 4px; box-shadow: var(--shadow-sm); }
-    .pkg-toggle-btn { padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; color: var(--c-text-muted); transition: all 0.3s; cursor: none; }
+    .pkg-toggle-btn { padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; color: var(--c-text-muted); transition: all 0.3s;  }
     .pkg-toggle-btn.active { background: var(--c-navy); color: white; }
 
     /* Stats section */
@@ -845,8 +845,8 @@
   // Active dot styling for testimonials
   document.querySelectorAll('.testimonial-dot').forEach((dot, i) => {
     dot.style.cssText = i === 0
-      ? 'width:32px;height:6px;border-radius:3px;background:var(--c-gold);border:none;transition:all 0.3s;cursor:none;'
-      : 'width:6px;height:6px;border-radius:3px;background:var(--c-beige-dark);border:none;transition:all 0.3s;cursor:none;';
+      ? 'width:32px;height:6px;border-radius:3px;background:var(--c-gold);border:none;transition:all 0.3s;'
+      : 'width:6px;height:6px;border-radius:3px;background:var(--c-beige-dark);border:none;transition:all 0.3s;';
   });
   </script>
 
