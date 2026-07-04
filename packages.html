@@ -28,7 +28,7 @@
     .spec-table thead th {
       font-weight: 700;
       font-size: 1.15rem;
-      color: #0c1d2e;
+      color: var(--c-text);
       background-color: #f5f0e8;
       text-transform: none;
       letter-spacing: 0.01em;
@@ -279,8 +279,8 @@
 </style>
 <style>
   /* ── Package Card Accordion (Design / PM) ── */
-  .pkg-accordion { margin-top: 1.2rem; border-top: 1px solid rgba(22,32,50,0.1); }
-  .pkg-accordion-item { border-bottom: 1px solid rgba(22,32,50,0.08); }
+  .pkg-accordion { margin-top: 1.2rem; border-top: 1px solid var(--c-border); }
+  .pkg-accordion-item { border-bottom: 1px solid var(--c-border); }
   .pkg-accordion-header {
     display: flex;
     justify-content: space-between;
@@ -290,7 +290,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 0.88rem;
-    color: #0c1d2e;
+    color: var(--c-text);
     user-select: none;
     transition: color 0.2s;
   }
@@ -306,7 +306,7 @@
   .pkg-acc-list li strong {
     flex-shrink: 0;
     flex-basis: 160px;
-    color: #0c1d2e;
+    color: var(--c-text);
   }
   .pkg-accordion-item.open .pkg-accordion-toggle { transform: rotate(45deg); }
   .pkg-accordion-body {
@@ -325,7 +325,7 @@
   }
   .pkg-acc-list li {
     font-size: 0.85rem;
-    color: rgba(22,32,50,0.95);
+    color: var(--c-text-muted);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     letter-spacing: normal;
@@ -343,7 +343,7 @@
     flex-shrink: 0;
   }
   .pkg-acc-list li strong {
-    color: #0c1d2e;
+    color: var(--c-text);
     font-weight: 700;
     text-transform: none;
     font-size: 0.82rem;
