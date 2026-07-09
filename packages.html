@@ -1231,7 +1231,7 @@
           <div style="display: flex; align-items: center; gap: 1rem;">
             <label style="font-weight: 600; color: var(--c-navy);">No. of Floors</label>
             <select id="adv-calc-floors" style="padding: 0.5rem 1rem; border: 1px solid #ddd; border-radius: 6px; font-family: 'Inter', sans-serif;">
-              <option value="1">G Only</option>
+
               <option value="2" selected>G + 1</option>
               <option value="3">G + 2</option>
               <option value="4">G + 3</option>
@@ -1407,7 +1407,7 @@
         // Sump Row
         tbody.innerHTML += `
             <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of RCC Water Sump (A 4 member family will require 9000 liter capacity)</td>
+              <td style="padding: 0.5rem 1rem; font-size: 0.9rem;">Size of RCC Water Sump (A 4 member family will require 9000 liter capacity), including waterproofing with Tiles Laying</td>
               <td style="padding: 0.5rem 1rem; font-size: 0.9rem; text-align: center;">
                 <input type="number" id="adv-input-sump" value="${state.sump}" placeholder="No. of Liters" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
               </td>
